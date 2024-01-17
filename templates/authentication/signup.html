@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Sign Up</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    
+    <h3> Signup Now!</h3> 
+    <div>
+        {% for message in messages %}
+        {{message}}
+        {% endfor %}
+    </div>
+    
+    <form action="signup" method="post"> 
+    {% csrf_token %}
+    
+        
+        <label for="">User Name</label>
+        <input type="text" id="username" name="username" placeholder="User Name Must Be Alpha-Numerical" required>
+        <br>
+
+        <label for="">First Name</label>
+        <input type="text" id="first_name" name="first_name" placeholder="Enter Your First Name" required>
+        <br>
+
+        <label for="">Last Name</label>
+        <input type="text" id="last_name" name="last_name" placeholder="Enter Your Last Name" required>
+        <br>
+
+        <label for="">E-Mail</label>
+        <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+        <br>
+
+        <label for="">Password</label>
+        <input type="password" id="pass1" name="pass1" placeholder="Enter Your Password" required>
+        <br>
+
+        <label for="">Confirm Password</label>
+        <input type="password" id="pass2" name="pass2" placeholder="Confirm Your Password" required>
+        <br>
+
+        <button type="submit">Submit</button>
+        <br>
+        <br>
+        <button type="Login" ><a href="signin">Signin</a></button>
+
+    </form>
+
+
+</body>
+</html>

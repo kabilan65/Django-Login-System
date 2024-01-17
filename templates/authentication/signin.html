@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Sign Up</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+
+    <h3>Login Now!</h3> 
+    <div>
+        {% for message in messages %}
+        {{message}}
+        {% endfor %}
+    </div>
+
+
+    <form action="signin" method="post"> 
+    {% csrf_token %}
+    
+        
+        <label for="">User Name</label>
+        <input type="text" id="username" name="username" placeholder="Enter Your UserName" required>
+        <br>
+
+        <label for="">Password</label>
+        <input type="password" id="pass1" name="pass1" placeholder="Enter Your Password" required>
+        <br>
+
+
+        <button type="submit">Submit</button>
+
+        <br>
+        <br>
+        <button type="Signup !" ><a href="signup">SignUp</a></button>
+
+
+    </form>
+
+
+</body>
+</html>
